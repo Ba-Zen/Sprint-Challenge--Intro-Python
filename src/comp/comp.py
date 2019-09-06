@@ -28,20 +28,20 @@ humans = [
 # Write a list comprehension that creates a list of names of everyone
 # whose name starts with 'D':
 print("Starts with D:")
-a = [a for a in humans if a.name.startswith("D")]
+a = [a.name for a in humans if a.name.startswith('D')]
 print(a)
 
 # Write a list comprehension that creates a list of names of everyone
 # whose name ends in "e".
 print("Ends with e:")
-b = [b for b in humans if b.name.endswith("e")]
+b = [b.name for b in humans if b.name.endswith("e")]
 print(b)
 
 # Write a list comprehension that creates a list of names of everyone
 # whose name starts with any letter between 'C' and 'G' inclusive.
 print("Starts between C and G, inclusive:")
 first_letter = ('C', 'D', 'E', 'F', 'G')
-c = [i for i in humans if i.name.startswith(first_letter)]
+c = [i.name for i in humans if i.name.startswith(first_letter)]
 print(c)
 
 # Write a list comprehension that creates a list of all the ages plus 10.
@@ -52,14 +52,14 @@ print(d)
 # Write a list comprehension that creates a list of strings which are the name
 # joined to the age with a hyphen, for example "David-31", for all humans.
 print("Name hyphen age:")
-e = [", ".join("-".join((o.name, str(o.age))) for o in humans)]
+e = [f"{h.name}-{str(h.age)}" for h in humans]
 print(e)
 
 # Write a list comprehension that creates a list of tuples containing name and
 # age, for example ("David", 31), for everyone between the ages of 27 and 32,
 # inclusive.
 print("Names and ages between 27 and 32:")
-f = [a for a in humans if a.age in range(27, 33)]
+f = [(n.name, n.age) for n in humans if n.age in range(27, 33)]
 print(f)
 
 # Write a list comprehension that creates a list of new Humans like the old
