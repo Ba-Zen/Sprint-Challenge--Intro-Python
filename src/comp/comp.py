@@ -7,7 +7,7 @@ class Human:
 
     def __repr__(self):
         return f"<Human: {self.name}, {self.age}>"
-
+  
 humans = [
     Human("Alice", 29),
     Human("Bob", 32),
